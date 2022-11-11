@@ -6,6 +6,7 @@ import {
   addNew,
   contact,
   bookAuthor,
+  // eslint-disable-next-line no-unused-vars
   addBook,
   pageTitle,
   bookContainer,
@@ -14,6 +15,7 @@ import {
   form,
 } from './modules/elements-html.js';
 
+// eslint-disable-next-line no-unused-vars
 class features {
   static addNewBook = () => {
     // js to create a new book object
@@ -84,9 +86,8 @@ class features {
     }
   };
 }
-
 // js to add event to aadBook and prevent default
-const addNewBook = form.addEventListener('click', (event) => {
+const buttonAdd = addBook.addEventListener('click', (event) => {
   if (bookTitle.value == null || bookAuthor.value == null) {
     event.preventDefault();
   } else {
@@ -95,24 +96,27 @@ const addNewBook = form.addEventListener('click', (event) => {
 });
 
 // js to invoke displayBooks function
-const displayAllBooks = window.addEventListener(
+window.addEventListener(
   'DOMContentLoaded',
   features.displayBooks,
 );
+// js to display time
 const dateTime = DateTime.now();
 document.querySelector('.date-time').innerHTML = dateTime.toLocaleString(
   DateTime.DATETIME_MED,
 );
+
 // functions for DOM Manipulation
 const displayList = () => {
   bookContainer.classList.remove('hide');
   list.classList.remove('deactive');
-  bookContainer.classList.add('books-container');
   form.classList.add('hide');
   addNew.classList.add('deactive');
   contactContainer.classList.add('hide');
   contact.classList.add('deactive');
   pageTitle.innerHTML = 'All awesome books';
+  // eslint-disable-next-line no-console
+  container.innerHTML = 'hola';
 };
 list.addEventListener('click', displayList);
 
@@ -124,6 +128,7 @@ const displayAddNew = () => {
   contactContainer.classList.add('hide');
   contact.classList.add('deactive');
   pageTitle.innerHTML = 'Add a new book';
+  buttonAdd();
 };
 
 addNew.addEventListener('click', displayAddNew);

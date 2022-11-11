@@ -22,7 +22,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 a {
@@ -56,7 +56,7 @@ li {
 }
 
 .container-nav-inside {
-  width: 15%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,10 +136,10 @@ li {
 }
 
 .books_container {
-  display: block;
   width: 98%;
-  height: 700px;
+  height: 70rem;
   margin-top: 45px;
   overflow: auto;
   border: 2px solid black;
+  background-color: red;
 }
